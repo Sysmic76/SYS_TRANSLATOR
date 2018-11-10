@@ -102,6 +102,7 @@ exports.listen = function(client)
 
    client.on("message", message =>
    {
+     console.log(`${message.guild.name} - ${message.guild.id}`);
       messageHandler(config, message);
    });
 
@@ -171,7 +172,7 @@ exports.listen = function(client)
 
    process.on("unhandledRejection", (reason, p) =>
    {
-      const err = "Unhandled Rejection at:" + p + "reason:" + reason;
+      const err = "Unhandled Rejection at:" + JSON.stringify(p) + "reason:" + reason;
       logger("dev", err);
       return logger("error", err, "unhandled");
    });
