@@ -16,6 +16,7 @@ const cmdTranslateLast = require("./translate.last");
 const cmdTranslateThis = require("./translate.this");
 const cmdTranslateAuto = require("./translate.auto");
 const cmdTranslateStop = require("./translate.stop");
+const cmdTranslatereact = require("./translate.react");
 // ---------------------------------------
 // Extract a parameter's value with regex
 // ---------------------------------------
@@ -220,6 +221,7 @@ module.exports = function(data)
          "last": cmdTranslateLast,
          "auto": cmdTranslateAuto,
          "stop": cmdTranslateStop,
+         "react": cmdTranslatereact,
          "help": cmdHelp,
          "info": cmdHelp,
          "list": cmdList,
